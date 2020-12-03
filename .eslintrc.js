@@ -14,6 +14,7 @@ module.exports = {
         'no-console': 'off',
         'no-plusplus': 'off',
         'no-use-before-define': 'off',
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
         'import/extensions': [
             'error',
             {
