@@ -6,7 +6,7 @@ if (!TEST_DAY) {
     throw new Error('Please supply a day to test using the format `npm start {day}`');
 }
 
-aocLoader(2019, TEST_DAY)
+aocLoader(2020, TEST_DAY)
     .then(async (data) => {
         const day = await import(`./src/day${TEST_DAY}.ts`);
 
