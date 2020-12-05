@@ -1,8 +1,5 @@
 export function getSeatID(row: string): number {
-    return row
-        .split('')
-        .reverse()
-        .reduce((sum, val, i) => (val.match(/R|B/) ? 2 ** i + sum : sum), 0);
+    return parseInt(row.replace(/B|R/g, '1').replace(/F|L/g, '0'), 2);
 }
 
 export function part1(data: string): number {
