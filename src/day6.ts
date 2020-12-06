@@ -2,10 +2,7 @@ export function part1(data: string): number {
     return data
         .split('\n\n')
         .map((d) => {
-            const yesAnswerers = new Set();
-            d.split('')
-                .filter((v) => v !== '\n')
-                .forEach((v) => yesAnswerers.add(v));
+            const yesAnswerers = new Set(d.split('').filter((v) => v !== '\n'));
             return yesAnswerers.size;
         })
         .reduce((a, b) => a + b, 0);
